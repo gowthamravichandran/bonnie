@@ -36,7 +36,7 @@ production:
   <<: *defaults
   patient_conversion_service_url: http://localhost:5050/patients/convertMany
   virus_scan:
-    enabled: true
+    enabled: false
     scan_url: 'http://localhost:5000/scan-file'
     api_key: '1234567'
     timeout: 30
