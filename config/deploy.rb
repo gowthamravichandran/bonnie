@@ -1,8 +1,8 @@
 # config valid only for Capistrano 3.1
-lock '3.14.1'
+lock '3.16.0'
 
 set :application, 'bonnie'
-set :repo_url, 'https://github.com/MeasureAuthoringTool/bonnie.git'
+set :repo_url, 'https://github.com/gowthamravichandran/bonnie.git'
 set :deploy_to, '/var/www/rails_apps/bonnie'
 
 set :linked_dirs, fetch(:linked_dirs, []).concat(%w{log tmp/pids tmp/sockets vendor/bundle public/assets public/system db/backups})
@@ -22,7 +22,7 @@ namespace :deploy do
 end
 
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default value for :scm is :git
 # set :scm, :git
